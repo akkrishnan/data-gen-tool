@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
+## Few Important Commits
+
+ng g module home
+
+ng g component home
+
+ng g module home-routing --flat --module=home
+
+ng update @angular/cli @angular/core --allow-dirty
+
+ng serve --o --host=krishserver --port=80
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

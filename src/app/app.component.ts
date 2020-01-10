@@ -30,50 +30,55 @@ export class AppComponent implements OnInit {
   formGroup: FormGroup;
   post: any = '';
   error: JSONObject[] = [
-    { key: 'fileName', value: 'Enter File Name. For eg., "MYGENERATEDFILE01"' },
-    { key: 'destination', value: 'Enter Destination, you can provide your desktop location' },
-    { key: 'noOfCols', value: 'Enter Number of Columns' },
-    { key: 'noOfRows', value: 'Enter Number of Rows' },
-    { key: 'colDecimeter', value: 'Enter Column Decimeter' },
-    { key: 'attributeName', value: 'Enter Attribute Name' },
-    { key: 'dataName', value: 'Enter Data Name' },
-    { key: 'dataPattern', value: 'Enter Data Pattern' },
-    { key: 'startingFrom', value: 'Starting From' },
-    { key: 'endingTo', value: 'Ending To' },
-    { key: 'startingLength', value: 'Starting Length' },
-    { key: 'endingLength', value: 'Ending Length' },
-    { key: 'fixedLength', value: 'Fixed Length' },
-    { key: 'charactersFor', value: 'Characters For' }
+    { key: 'fileName', value: 'Enter file name without spaces. For eg., "NEWFILENAME01"' },
+    { key: 'destination', value: 'Enter destination, you can provide your desktop location' },
+    { key: 'noOfCols', value: 'Enter number of columns' },
+    { key: 'noOfRows', value: 'Enter number of rows' },
+    { key: 'colDecimeter', value: 'Enter column decimeter' },
+    { key: 'attributeName', value: 'Enter attribute name' },
+    { key: 'dataName', value: 'Enter data name' },
+    { key: 'dataPattern', value: 'Enter data pattern' },
+    { key: 'startingFrom', value: 'Enter starting from' },
+    { key: 'endingTo', value: 'Enter ending to' },
+    { key: 'startingLength', value: 'Enter starting length' },
+    { key: 'endingLength', value: 'Enter ending length' },
+    { key: 'fixedLength', value: 'Enter number' },
+    { key: 'charactersFor', value: 'Enter some characters' }
   ];
 
   hint: JSONObject[] = [
-    { key: 'fileName', value: 'Enter any file name. For eg., "MYGENERATEDFILE01"' },
+    { key: 'fileName', value: 'Enter any file name. For eg., "NEWFILENAME01"' },
     { key: 'destination', value: 'Provide your desktop location' },
     { key: 'noOfCols', value: 'Enter valid number' },
     { key: 'noOfRows', value: 'Enter valid number' },
     { key: 'colDecimeter', value: 'For eg. Comma (,) can be entered' }
   ];
+
   projectNameList: JsonFormat[] = [
     { name: 'System of Insights', id: 'soi' },
     { name: 'Project1', id: 'project1' },
     { name: 'Project2', id: 'project2' }
   ];
+
   dataRequestList: JsonFormat[] = [
     { name: 'Network Billing', id: 'billing' },
     { name: 'Network Support', id: 'support' }
   ];
+
   requestTypesList: JsonFormat[] = [
     { name: 'New data set', id: 'newData' },
     { name: 'Existing data backup', id: 'existingData' },
     { name: 'Data with masking', id: 'maskData' },
     { name: 'Data with encrypted', id: 'encryptedData' }
   ];
+
   dataFormatList: JsonFormat[] = [
     { name: 'Flat file', id: 'flat' },
     { name: 'XML', id: 'xml' },
     { name: 'JSON', id: 'json' },
     { name: 'Database', id: 'database' }
   ];
+  
   title = 'data-generation-tool';
 
   // constructor() {
@@ -171,6 +176,26 @@ export class AppComponent implements OnInit {
 
   validateStartingFrom() {
     return this.validateErrorMessage('startingFrom');
+  }
+
+  validateEndingTo() {
+    return this.validateErrorMessage('endingTo');
+  }
+
+  validateStartingLen() {
+    return this.validateErrorMessage('startingLength');
+  }
+
+  validateEndingLen() {
+    return this.validateErrorMessage('endingLength');
+  }
+
+  validateFixedLen() {
+    return this.validateErrorMessage('fixedLength');
+  }
+
+  validateCharactersFor() {
+    return this.validateErrorMessage('charactersFor');
   }
 
   getFileNameHint() {

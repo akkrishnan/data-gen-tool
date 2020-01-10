@@ -25,6 +25,12 @@ $appFormContainerDiv: 482px;
     }
   }
 
+  ::ng-content .toolbar-logout {
+    .mat-raised-button {
+      left: 1020px;
+    }
+  }
+
   .app-form-container>* {
     width: 100%;
   }

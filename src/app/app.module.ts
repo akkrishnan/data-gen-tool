@@ -20,7 +20,8 @@ import {
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+  MatTooltipModule
 } from '@angular/material';
 
 import { MainFormComponent } from './main-form/main-form.component';
@@ -58,7 +59,8 @@ import { CustomValidatorsService } from './custom-validators.service';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [
     CustomValidatorsService

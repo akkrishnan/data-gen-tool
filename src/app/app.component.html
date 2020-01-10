@@ -1,8 +1,10 @@
 <div class="toolbar mat-elevation-z6 headerToolBar" role="banner">
   <mat-toolbar color="primary">
     <span class="fill-remaining-space">Data Generator Tool</span>
+    <div class="toolbar-logout"><button mat-raised-button color="secondary" matTooltip="Logout">Logout</button></div>
   </mat-toolbar>
 </div>
+
 
 <div class="app-form-container" *ngIf="!post; else forminfo" novalidate>
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
@@ -129,7 +131,8 @@
                                 <mat-label>Starting From</mat-label>
                                 <input type="number" matInput formControlName="startingFrom" autocomplete="off"
                                   placeholder="Starting From">
-                                <mat-error *ngIf="formGroup.controls['startingFrom'].invalid">{{ validateStartingFrom() }}
+                                <mat-error *ngIf="formGroup.controls['startingFrom'].invalid">
+                                  {{ validateStartingFrom() }}
                                 </mat-error>
                               </mat-form-field>
                             </td>
@@ -139,7 +142,7 @@
                                 <mat-label>Ending To</mat-label>
                                 <input type="number" matInput formControlName="endingTo" autocomplete="off"
                                   placeholder="Ending To">
-                                <mat-error *ngIf="formGroup.controls['endingTo'].invalid">{{ validateDecimeter() }}
+                                <mat-error *ngIf="formGroup.controls['endingTo'].invalid">{{ validateEndingTo() }}
                                 </mat-error>
                               </mat-form-field>
                             </td>
@@ -156,7 +159,7 @@
                                 <input type="number" matInput formControlName="startingLength" autocomplete="off"
                                   placeholder="Starting Length">
                                 <mat-error *ngIf="formGroup.controls['startingLength'].invalid">
-                                  {{ validateDecimeter() }}</mat-error>
+                                  {{ validateStartingLen() }}</mat-error>
                               </mat-form-field>
                             </td>
                             <td width="10"></td>
@@ -165,7 +168,7 @@
                                 <mat-label>Ending Length</mat-label>
                                 <input type="number" matInput formControlName="endingLength" autocomplete="off"
                                   placeholder="Ending Length">
-                                <mat-error *ngIf="formGroup.controls['endingLength'].invalid">{{ validateDecimeter() }}
+                                <mat-error *ngIf="formGroup.controls['endingLength'].invalid">{{ validateEndingLen() }}
                                 </mat-error>
                               </mat-form-field>
                             </td>
@@ -175,7 +178,7 @@
                                 <mat-label>Fixed Length</mat-label>
                                 <input type="number" matInput formControlName="fixedLength" autocomplete="off"
                                   placeholder="Fixed Length">
-                                <mat-error *ngIf="formGroup.controls['fixedLength'].invalid">{{ validateDecimeter() }}
+                                <mat-error *ngIf="formGroup.controls['fixedLength'].invalid">{{ validateFixedLen() }}
                                 </mat-error>
                               </mat-form-field>
                             </td>
@@ -190,7 +193,7 @@
                           <mat-label>Characters For [...]</mat-label>
                           <input matInput formControlName="charactersFor" autocomplete="off"
                             placeholder="Enter Characters for">
-                          <mat-error *ngIf="formGroup.controls['charactersFor'].invalid">{{ validateDecimeter() }}
+                          <mat-error *ngIf="formGroup.controls['charactersFor'].invalid">{{ validateCharactersFor() }}
                           </mat-error>
                         </mat-form-field>
                       </div>
