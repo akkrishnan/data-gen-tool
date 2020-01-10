@@ -1,0 +1,16 @@
+<div class="app-form-container" *ngIf="!post; else forminfo" novalidate>
+<form [formGroup]="formGroupProject" class="form">
+<mat-form-field>
+    <mat-label>Project Name</mat-label>
+    <input matInput placeholder="Project Name" aria-label="Project Name" [matAutocomplete]="auto"
+        formControlName="projectNameControl" required>
+    <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let projectName of filteredProjectNameList | async" [value]="projectName.name">
+            <span>{{projectName.name}}</span>
+        </mat-option>
+    </mat-autocomplete>
+    <!-- <mat-error *ngIf="formGroup.controls['projectNameControl'].hasError('required')">Please select project name</mat-error> -->
+</mat-form-field>
+</form>
+</div>

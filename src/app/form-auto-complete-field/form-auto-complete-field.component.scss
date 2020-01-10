@@ -1,0 +1,19 @@
+$fieldWidth :350px;
+$redColor : red;
+
+.app-form-container {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin-left: 250px;
+  }
+
+  mat-form-field {
+    width: $fieldWidth;
+  }
+}
+
+.app-form-container>* {
+  width: 100%;
+}
