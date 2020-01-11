@@ -1,11 +1,14 @@
-$fieldWidth: 600px;
-$cardWidth: 800px;
+$fieldWidth: 400px;
+$cardWidth: 700px;
 $redColor: red;
 $smallCardWidth: 185px;
 $tripleCardWidth: 120px;
 $attributeContentStyleWidth: 375px;
 $appFormContainerDiv: 482px;
 
+.mat-card{
+  padding:10px !important;
+}
 
 .app-form-container {
   display: flex;
