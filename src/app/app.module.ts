@@ -22,9 +22,9 @@ import {
   MatIconModule,
   MatCardModule,
   MatTooltipModule,
-  MatPaginator,
-  MatSort,
-  MatTableDataSource
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule
 } from '@angular/material';
 
 import { MainFormComponent } from './main-form/main-form.component';
@@ -64,9 +64,9 @@ import { CustomValidatorsService } from './custom-validators.service';
     MatIconModule,
     MatCardModule,
     MatTooltipModule,
-    MatPaginator,
-    MatSort,
-    MatTableDataSource
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     CustomValidatorsService
